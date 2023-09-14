@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <unistd.h>
-#include <termios.h>
+/* #include <termios.h> */
 
 #if defined(__APPLE__) && (_POSIX_C_SOURCE < 200809L)
 FILE *open_memstream(char **ptr, size_t *sizeloc);
@@ -52,8 +52,8 @@ int fy_tag_scan(const char *data, size_t len, struct fy_tag_scan_info *info);
 #define FY_UNUSED /* nothing */
 #endif
 
-int fy_term_set_raw(int fd, struct termios *oldt);
-int fy_term_restore(int fd, const struct termios *oldt);
+/* int fy_term_set_raw(int fd, struct termios *oldt); */
+/* int fy_term_restore(int fd, const struct termios *oldt); */
 ssize_t fy_term_write(int fd, const void *data, size_t count);
 int fy_term_safe_write(int fd, const void *data, size_t count);
 ssize_t fy_term_read(int fd, void *data, size_t count, int timeout_us);
